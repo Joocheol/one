@@ -1,9 +1,17 @@
 ---
-title: "Options and positions"
+title: "Hello World"
+author: "Me"
+date: "February 24, 2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+#
 
+```{tikz, fig.cap = "Funky tikz", fig.ext = 'png', cache=TRUE, fig.height=2, fig.width=2}
+\usetikzlibrary{}
+\begin{tikzpicture}[]
+
+\draw (0,0) -- (1,1);
+
+\end{tikzpicture}
+```
