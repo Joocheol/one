@@ -9,6 +9,9 @@ output: html_document
 1. options vs. forward
 2. call option vs. put option
 3. long position vs. short position
+    - o
+    - b
+    
 
   
   
