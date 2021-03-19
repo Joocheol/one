@@ -1,17 +1,43 @@
 ---
-title: "Hello World"
-author: "Me"
-date: "February 24, 2020"
+title: "Demo"
 output: html_document
 ---
 
-#
+# Options and positions
 
-```{tikz, fig.cap = "Funky tikz", fig.ext = 'png', cache=TRUE, fig.height=2, fig.width=2}
-\usetikzlibrary{}
+## Objectives
+1. options vs. forward
+2. call option vs. put option
+3. long position vs. short position
+
+  
+  
+```{tikz, fig.cap = "Funky tikz", fig.ext = 'png', cache= TRUE, echo = FALSE}
+\usetikzlibrary{positioning}
 \begin{tikzpicture}[]
+\draw [] (0,0) -- (2,0) ;
+\draw[->] (2,0) -- (5,0) node[anchor=north west] (S_T) {$S_T$};
+\draw [<-] (0,-3) -- (0,0) node[anchor=east] {$0$};
+\draw [->] (0,0) -- (0,3) node[anchor=east] {payoff};
+\draw (2,0.1) -- (2,-0.1) node[anchor=north] {$K$};
 
-\draw (0,0) -- (1,1);
+\draw [dashed] (0,-2) --(2,0);
+\draw (2,0) -- (4,2);
 
+\node[right=of S_T] {$S_T - K$};
+\end{tikzpicture}
+
+\usetikzlibrary{positioning}
+\begin{tikzpicture}[]
+\draw [] (0,0) -- (2,0) ;
+\draw[->] (2,0) -- (5,0) node[anchor=north west] (S_T) {$S_T$};
+\draw [<-] (0,-3) -- (0,0) node[anchor=east] {$0$};
+\draw [->] (0,0) -- (0,3) node[anchor=east] {payoff};
+\draw (2,0.1) -- (2,-0.1) node[anchor=north] {$K$};
+
+\draw [dashed] (0,-2) --(2,0);
+\draw (2,0) -- (4,2);
+
+\node[right=of S_T] {$S_T - K$};
 \end{tikzpicture}
 ```
